@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Nio WiFi</title>
+    		<script type="text/javascript">
+			function toggleForm() {
+				if(document.getElementById('terms').checked) {
+					document.getElementById('submit-button').disabled = false;
+				} else {
+					document.getElementById('submit-button').disabled = true;
+				}
+				return true;
+			}
+		</script>
+		<style type="text/css">
+		html {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+		* {
+			margin-bottom: 1rem;
+		}
+
+		body {
+			background-color: #FFF;
+			margin: 0;
+		  	padding: 0;
+		  		height: 100%;
+		  		font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
+		}
+
+		.container {
+			display: flex;
+			 flex-direction: row;
+			 flex-wrap: nowrap;
+			 justify-content: center;
+			align-content: center;
+			align-items: center;
+	height: 100%;
+
+		}
+
+		h1 {
+			margin: 0;
+		  	padding: 0;
+		}
+
+		form {
+			width: 60%;
+			text-align: center;
+			order: 0;
+			flex: 0 1 auto;
+			align-self: auto;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		label {
+			line-height: 1;
+		}
+
+		iframe {
+			width: 100%;
+			height: 300px;
+		}
+	
+		button {
+			width: 100%;
+		}
+
+		</style>
+	</head>
+	<body>
+	<div class="container">
+
+	<form method="post" action="$PORTAL_ACTION$"> 
+	<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+		<h1><img src="captiveportal-logo-nio.png" alt="NIO" /></h1>
+	<iframe src="captiveportal-terms-conditions.html" scrolling="yes">
+	</iframe><br/>
+	<input id="terms" name="terms" type="checkbox" value="1" onclick="toggleForm()" /> <label for="terms">
+	I agree to the terms &amp; conditions</label>
+<button id="submit-button" name="accept" type="submit" value="Continue" disabled>Submit</button>
+</form>
+	</div>
+	</body>
+</html>
